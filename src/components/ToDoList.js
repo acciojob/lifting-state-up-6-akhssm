@@ -2,9 +2,9 @@ import React from "react";
 
 const TodoList = ({ todos, handleComplete }) => {
   return (
-    <div>
+    <ul>
       {todos.map((todo) => (
-        <div key={todo.id} style={{ marginBottom: "10px" }}>
+        <li key={todo.id} style={{ marginBottom: "10px" }}>
           <span
             style={{
               textDecoration: todo.completed ? "line-through" : "none",
@@ -19,9 +19,9 @@ const TodoList = ({ todos, handleComplete }) => {
               Complete
             </button>
           )}
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
