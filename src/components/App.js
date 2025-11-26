@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./../styles/App.css";
-import ToDoList from "./ToDoList";
+import ToDoList from "./ToDoList"; 
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -13,7 +13,7 @@ const App = () => {
     const updatedTodos = todos.map((todo) =>
       todo.id === id ? { ...todo, completed: true } : todo
     );
-    setTodos(updatedTodos); 
+    setTodos(updatedTodos);
   };
 
   return (
