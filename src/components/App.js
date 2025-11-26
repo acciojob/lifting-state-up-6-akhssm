@@ -1,25 +1,27 @@
 import React, { useState } from "react";
 import "./../styles/App.css";
-import ToDoList from "./ToDoList";
+import TodoList from "./ToDoList";
 
 const App = () => {
   const [todos, setTodos] = useState([
     { id: 1, text: "Learn React", completed: false },
     { id: 2, text: "Build a React app", completed: false },
-    { id: 3, text: "Deploy the React app", completed: false },
+    { id: 3, text: "Deploy the React app", completed: false }
   ]);
 
   const handleComplete = (id) => {
-    const updatedList = todos.map((todo) =>
-      todo.id === id ? { ...todo, completed: true } : todo
+    const updated = todos.map((item) =>
+      item.id === id ? { ...item, completed: true } : item
     );
-    setTodos(updatedList);
+    setTodos(updated);
   };
 
   return (
     <div id="main">
-      <h1>Todo List</h1>
-      <ToDoList todos={todos} handleComplete={handleComplete} />
+      <h1>Parent Component</h1>
+      <h2>Child Component</h2>
+
+      <TodoList todos={todos} handleComplete={handleComplete} />
     </div>
   );
 };
