@@ -13,7 +13,7 @@ const App = () => {
     const updatedTodos = todos.map((todo) =>
       todo.id === id ? { ...todo, completed: true } : todo
     );
-    setTodos(updatedTodos);
+    setTodos(updatedTodos); 
   };
 
   return (
