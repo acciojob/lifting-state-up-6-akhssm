@@ -1,14 +1,14 @@
 import React from "react";
 
-const TodoList = ({ todos, handleComplete }) => {
+const ToDoList = ({ todos, handleComplete }) => {
   return (
     <ul>
       {todos.map((todo) => (
-        <li key={todo.id} style={{ marginBottom: "10px" }}>
+        <li key={todo.id}>
           <span
             style={{
               textDecoration: todo.completed ? "line-through" : "none",
-              marginRight: "10px"
+              marginRight: "10px",
             }}
           >
             {todo.text}
@@ -25,4 +25,4 @@ const TodoList = ({ todos, handleComplete }) => {
   );
 };
 
-export default TodoList;
+export default ToDoList;
